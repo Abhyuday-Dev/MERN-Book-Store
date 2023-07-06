@@ -1,11 +1,16 @@
 const express = require("express");
+const mongoose = require("mongoose");
+require("./MongoDB/connect");
+const bookRoute=require("./routes/booksRoutes")
 
 const app = express();
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello");
-});
+app.use("/api/v1",bookRoute);
 
-app.listen(8080, () => {
-  console.log("Server started on port 8080");
+// Wait for MongoDB connection before starting the server
+mongoose.connection.once("open", () => {
+  app.listen(8080, () => {
+    console.log("Server started on port 8080");
+  });
 });
