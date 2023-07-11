@@ -1,0 +1,12 @@
+.books{
+    display :flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.books h4{
+    font-size: 2.5rem;
+    font-weight: 600;
+}

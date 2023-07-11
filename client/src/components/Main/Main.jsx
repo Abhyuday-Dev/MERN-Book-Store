@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Main.css";
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   return (
@@ -15,7 +16,7 @@ Books Unleash Imagination and Connection.</h1>
               tailored solutions to fuel growth, innovation, and success. Join
               us today!
             </p>
-            <a href="#" target="_blank" className="btn">Get Started</a>
+           <Link  className="btn" to="/books">View Books</Link>
           </div>
           {/* right side hero section */}
           <div className="hero-image">
