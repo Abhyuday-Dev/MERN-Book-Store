@@ -1,14 +1,18 @@
-import React from 'react';
-import BookCard from '../BooksCard/BookCard';
+import React from "react";
+import BookCard from "../BooksCard/BookCard";
+import "./BookSection.css";
 
-const BooksSection = ({ data }) => {
-  console.log("Data:", data);
-
+const BooksSection = ({ data, handleBookDelete, handleEditClick }) => {
   return (
-    <div>
+    <div className="book-section">
       {data && data.books.length > 0 ? (
         data.books.map((item, index) => (
-          <BookCard key={index} bookName={item.bookName} Author={item.author} image={item.image} />
+          <BookCard
+            key={index}
+            book={item}
+            handleBookDelete={handleBookDelete}
+            handleEditClick={handleEditClick}
+          />
         ))
       ) : (
         <div>No books found.</div>
