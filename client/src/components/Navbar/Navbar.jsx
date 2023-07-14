@@ -16,9 +16,9 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      <a href="#" className="nav__brand">
+      <Link to="/" className="nav__brand">
         Book Store
-      </a>
+      </Link>
       <ul className={`nav__menu ${isActive ? "nav_active" : ""}`}>
         <Link to="/">
           <li className="nav__item">

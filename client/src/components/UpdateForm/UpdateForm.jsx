@@ -51,8 +51,7 @@ const UpdateForm = ({ bookId, handleEditCancel, fetchData }) => {
 
   return (
     <div className="update-form">
-      <h2>Update Book</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <label htmlFor="bookName">Book Name:</label>
         <input
           type="text"
@@ -103,7 +102,7 @@ const UpdateForm = ({ bookId, handleEditCancel, fetchData }) => {
         />
 
         <div className="buttons">
-          <button type="submit">Update Book</button>
+          <button type="submit">Update</button>
           <button type="button" onClick={handleEditCancel}>
             Cancel
           </button>

@@ -43,9 +43,12 @@ const Books = () => {
     setEditBookId(null);
   };
 
+  const book="Books Section";
+  const up="Update Section";
+
   return (
     <div className="books">
-      <h4>Books Section</h4>
+      <h4>{editBookId?'Update Book Information':'Books Section'}</h4>
       <div className="books-display">
         {loading ? (
           <div>Loading...</div>

@@ -1,12 +1,33 @@
-.books{
-    display :flex;
-    justify-content: center;
+.books {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1rem;
-}
-
-.books h4{
+  }
+  
+  .books h4 {
     font-size: 2.5rem;
     font-weight: 600;
-}
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Styles for screens up to 768px width */
+    .books {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  
+    .books h4 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Styles for screens up to 480px width */
+    .books h4 {
+      font-size: 1.5rem;
+    }
+  }
+  

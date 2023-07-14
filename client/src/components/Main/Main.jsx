@@ -1,24 +1,25 @@
-import React from 'react';
+import React from "react";
 import "./Main.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
     <main>
       <section className="section section-hero">
-        <div className="container grid grid-two-column">
+        <div className="container">
           <div className="hero-data">
             <h1 className="primary-heading">
-Books Unleash Imagination and Connection.</h1>
+              Books Unleash Imagination and Connection.
+            </h1>
             <p className="para">
-              Welcome to StudyMonk, your premier digital recruitment
-              partner. We connect top talent with leading companies, delivering
-              tailored solutions to fuel growth, innovation, and success. Join
-              us today!
+              The Book Store Website is an online platform designed to cater to
+              book enthusiasts and provide them with a seamless experience to
+              explore, discover, and share their favorite books.
             </p>
-           <Link  className="btn" to="/books">View Books</Link>
+            <Link className="btns" to="/books">
+              View Books
+            </Link>
           </div>
-          {/* right side hero section */}
           <div className="hero-image">
             <img
               src="https://static.vecteezy.com/system/resources/previews/000/518/099/original/education-concept-vector-illustration-in-flat-style-online-education-school-university-creative-ideas.jpg"
