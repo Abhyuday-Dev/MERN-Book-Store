@@ -15,7 +15,7 @@ const Books = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/v1/getBooks");
+      const response = await axios.get("https://bookstore-2nj0.onrender.com/api/v1/getBooks");
       setData(response.data);
       setLoading(false);
     } catch (error) {
