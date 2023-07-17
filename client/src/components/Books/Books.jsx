@@ -26,7 +26,7 @@ const Books = () => {
 
   const handleBookDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/v1/deleteBook/${id}`);
+      await axios.delete(`https://bookstore-2nj0.onrender.com/api/v1/delete/${id}`);
       console.log("Book deleted");
       // Update the data state after deletion
       fetchData();

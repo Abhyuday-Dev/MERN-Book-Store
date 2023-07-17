@@ -17,7 +17,7 @@ const AddBooks = (props) => {
 
     const handleSubmit=async(e)=>{
         e.preventDefault();
-        await axios.post("http://localhost:8080/api/v1/add",formData).then((res)=>alert(res.data.message));
+        await axios.post("https://bookstore-2nj0.onrender.com/api/v1/add",formData).then((res)=>alert(res.data.message));
 
         setFormData({bookName:"",description:"",image:"",author:"",price:""});
     }

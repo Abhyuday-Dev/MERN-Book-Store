@@ -37,7 +37,7 @@ const UpdateForm = ({ bookId, handleEditCancel, fetchData }) => {
 
     try {
       await axios.put(
-        `http://localhost:8080/api/v1/updateBooks/${bookId}`,
+        `https://bookstore-2nj0.onrender.com/api/v1/updateBooks/${bookId}`,
         formData
       );
       alert("Book updated successfully");
