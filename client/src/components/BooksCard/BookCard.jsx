@@ -5,6 +5,11 @@ import { AiFillDelete } from "react-icons/ai";
 
 const BookCard = ({ book, handleBookDelete, handleEditClick }) => {
   const { _id, bookName, author, image, price } = book;
+  const [imgError, setImgError] = useState(false);
+
+  const handleImgError = () => {
+    setImgError(true);
+  };
 
   const handleDelete = () => {
     handleBookDelete(_id);
@@ -14,10 +19,15 @@ const BookCard = ({ book, handleBookDelete, handleEditClick }) => {
     handleEditClick(_id);
   };
 
+
   return (
     <div className="book read">
       <div className="cover">
-        <img src={image} alt="Book cover" />
+      {!imgError ? (
+        <img src={image} alt="Book Cover" onError={handleImgError} />
+      ) : (
+        <div>Failed to Load the Image</div>
+      )}
       </div>
       <div className="content">
         <p className="title">
